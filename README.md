@@ -62,14 +62,31 @@ The way copyright and media licensing is handled currently is very inefficient. 
 
 Let me explain the pain point. I want to be able to create a Youtube video and put my favourite Metallica song as a background music. I'm happy for the band to receive any revenues from the ads that Youtube runs etc. I'm not selling my video, I just put it out there for free. Metallica could actually be happy if thousands of people add their music to their videos and millions of ad views generate revenues for them. This isn't how it works currently sadly. You are supposed to get an explicit permit from the artist. That is fair of course, what I believe is wrong about this is that there is no smart contract or a decentralized platform which allows Metallica to pre-approve the transactional use of their songs and automatically get revenues from each use. All miss out here - the artist, the derivative content maker and the end user. 
 
+## __2.1 Solution: Automated royalties.__
 
+Our NFMT therefore should include logic that allows the content copyright owner to automatically receive royalties every time someone benefits from it in a way that generates profits. 
 
+Now, there are a couple problems with that if implementing this via smart contracts.
 
+1) How do you determine what value/benefit/profit has someone obtained?
+2) How do you make sure that the copyright owner is established correctly and the right people/entities will receive the royalties?
 
+Some of these can be solved technically by programming misc logic, for example every time NFMT is opened or played, the platform should track that and transfer royalties via microtransactions. In case ads are being shown or these NFMT being sold somehow, it is even simpler as the revenue will be easy to determine. 
 
+Not everything here is possible to solve though, therefore I propose two approaches for the first implementations of NFMT standard:
 
+## Public Declaration (User self-certifies) + Walled Garden Ecosystem
 
+(short-term solution)
 
+Here our solution is following:
+1. Get all users to certify they have the rights to post the content that they post.
+2. Get all users enter into an agreement that all content they post can be copied by other users akin to "Creative Commons" license.
+3. Enjoy the "walled garden" club where everybody can post and reuse content freely.
 
+## Content Rights and Royalties DAO ##
 
+(long-term solution)
+
+A DAO governance mechanism should be established that allows the community to reach consensus in relation to possible conflicts regarding ownership rights and royalties distribution. This will allow to resolve any inevitable conflicts and also this should include a mechanism for reflecting any decisions made by real-world "offchain" courts.
 
