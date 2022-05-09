@@ -90,3 +90,22 @@ Here our solution is following:
 
 A DAO governance mechanism should be established that allows the community to reach consensus in relation to possible conflicts regarding ownership rights and royalties distribution. This will allow to resolve any inevitable conflicts and also this should include a mechanism for reflecting any decisions made by real-world "offchain" courts.
 
+## Automated donation / charity payments ##
+
+Similar to the abovementioned built-in royalty payments which can be categorized as "compulsory donations", I believe it is very important for NFMTs to include a standard mechanism for voluntary donations. 
+
+Example: I want to create an NFMT-based meme/sticker pack devoted to Ukrainian army and Ukrainian people. Each mint requires a small payment and the whole amount of payment automatically gets sent to charities such as "Come back alive" https://www.comebackalive.in.ua/ etc.   
+
+This, in my opinion, is even more important than royalties payments, especially in the initial intended context of NFMT which is likely to use content that isn't subject to copyright, or the author has agreed for it to be used, however an important motivating factor driving the users to display and share such NFTs is their knowledge that they contribute to the social/viral spread of a charitable donations campaign. 
+
+This mechanism can, of course, be used to support various means that appeal to specific communities. 
+
+Importantly, standard token and smart contract methods allow us to support multiple causes and charities. For example, each token minted can automatically send a payment to an ecology / carbon offset charity in addition to the main cause it was issued for. 
+
+## Royalties / Donations "cap table" - DAO payouts
+
+To be continued..
+
+
+
+
