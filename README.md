@@ -106,6 +106,13 @@ Importantly, standard token and smart contract methods allow us to support multi
 
 To be continued..
 
+## Copyright Owner compensation Pot
+
+Is there a way to allow a fast spreading meme to be copied and sent around as much as possible, while at the same time safeguarding against any possible copyright infringement? Indeed, we can rely on a declaration by a user who uploads the content first but we have no way to verify if the user is indeed a copyright owner or the content is indeed free of copyright limitations. 
+
+One way to deal with this would be a "Compensation Pot", or an escrow account scheme where a portion of any fees gained by the token gets accummulated in a special reserve account that can only be withdrawn if governing DAO decides so (and / or when a condition is met, for example 180 days have passed since funds been accummulated). This savings pot will be used to pay compensations or resolve disputes in case they arise.
+
+
 
 
 
