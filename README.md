@@ -16,6 +16,25 @@ A: Users can mint "remembrance", "meme" or "charitable cause" tokens for free or
 
 The mechanism is described in detail below.
 
+![NFMT Illustration](NFMT_illustration.png)
+
+### Main scenario - mints and donations
+1. Collection admin deploys the contract, setting the desired variation sizes, donation amounts, wallet address for charities and the desired proportions for charities. [ This can be done directly in the contract constants ]
+2. Users mint tokens via web interface or directly via Etherscan, optionally sending a donation.
+3. Collection contract mints the respective variation for the user if the variation limit hasn't been reached and the donation is sufficient.
+4. Collection contract pays out the obtained donation to charities according to proportions.
+
+### Additional scenario - secondary market
+Collection admin should also set up a resell commission at OpenSea and other similar marketplaces (for example, 2.4%).
+
+For beneficiary contract admin should set up the address of the deployed collection contract.
+
+If receiving any commission / royalty from OpenSea and other marketplacse, or donation payments directly from wallets, contract should accumulate such donations.
+
+1. Anybody (not just admin) can call a "withdraw" function which transfers any accumulated ETH to all the charities wallets according to proportions set.
+
+
+
 
 ## Project inspiration / background
 
