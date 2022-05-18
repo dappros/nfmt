@@ -1,8 +1,26 @@
-# NFMT ("Never Forget" Memory Token)
-Note: the NFMT acronim can be interpreted in different ways. Current interpretation reflects my insipration to start this. 
-The best recognition however would be the community adoption and it is inevitable that many projects and applications might branch into topics that have nothing to do with "Never Forget". In such case the community can apply or develop more universally fitting interpretations, such for example as "__Nearly Fungible Multi Token__" or "__Meme Token__". This is welcome - if this project helps someone maybe there is a tiny proportion of people who will read the history behind it and think about that stuff.  
+# NFMT ()
+
+Q: What is NFMT?
+A1: "Never Forget" Memory Token
+A2: NFT Funding Meme Token
+
+NFTM is a variation of ERC-1155 NFT smart contract intended for following purposes:
+* allow users to self-mint & store the digital collectibles they care about
+* allow users to donate funds to the causes they care about
+
+Q: What is the mechanism of NFMT?
+A: Users can mint "remembrance", "meme" or "charitable cause" tokens for free or including an optional donation. All donations are immediately sent to the charities hard-coded into the collection smart contract.
+
+The mechanism is described in detail below.
+
 
 ## Project inspiration / background
+
+### NFMT acronym - what does it mean?
+
+Note: the NFMT acronym can be interpreted in different ways. The initial interpretation ("Never Forget" Memory Token) reflects my (Taras Filatov) insipration to start this. 
+
+The best recognition however would be the community adoption and it is inevitable that many projects and applications might branch into topics that have nothing to do with "Never Forget". In such case the community can apply or develop more universally fitting interpretations, such for example as "__Nearly Fungible Multi Token__" or "__Meme Token__". This is welcome - if this project helps someone maybe there is a tiny proportion of people who will read the history behind it and think about that stuff.  
 
 I wrote this in my Facebook today on 8th May 2022:
 
