@@ -1,7 +1,9 @@
 # NFMT
 
 Q: What is NFMT?
+
 A1: "Never Forget" Memory Token
+
 A2: NFT Funding Meme Token
 
 NFTM is a variation of ERC-1155 NFT smart contract intended for following purposes:
@@ -9,6 +11,7 @@ NFTM is a variation of ERC-1155 NFT smart contract intended for following purpos
 * allow users to donate funds to the causes they care about
 
 Q: What is the mechanism of NFMT?
+
 A: Users can mint "remembrance", "meme" or "charitable cause" tokens for free or including an optional donation. All donations are immediately sent to the charities hard-coded into the collection smart contract.
 
 The mechanism is described in detail below.
