@@ -1,4 +1,4 @@
-# NFMT ()
+# NFMT
 
 Q: What is NFMT?
 A1: "Never Forget" Memory Token
