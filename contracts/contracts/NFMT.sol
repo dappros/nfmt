@@ -22,6 +22,12 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
     uint constant public GOLD_COST = 300000000000000000; // 0.3 Eth
     uint constant public DIAMOND_COST = 1000000000000000000; // 1 Eth
 
+    address constant CHARITY1 = 0x68B11194369F0145a86C855c1db1750BD51CC8de;
+    address constant CHARITY2 = 0x21f5874aBC2c220d0Da49D142000D9dc75289C42;
+    address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
+
+    mapping(address => uint) public balances;
+
     constructor() ERC1155("") {}
 
     function pause() public onlyOwner {
@@ -43,7 +49,7 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
 
         if (id == 1) {
             require(_totalSupply < BRONZE_MAX_SUPPLY && amount == 1, "");
-            _mint(sender, id, amount, "");
+            return _mint(sender, id, amount, "");
         }
 
         if (id == 2) {
@@ -65,6 +71,11 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
             require(_totalSupply < DIAMOND_MAX_SUPPLY && msg.value >= (DIAMOND_COST * amount), "");
             _mint(sender, id, amount, "");
         }
+
+        uint256 oneQuarter = msg.value / 4;
+        balances[CHARITY1] += oneQuarter + oneQuarter;
+        balances[CHARITY2] += oneQuarter;
+        balances[CHARITY3] += oneQuarter;
     }
 
     function uri(uint256 tokenId) override public pure returns (string memory) {
@@ -75,6 +86,11 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
                 ".json"
             ))
         );
+    }
+
+    function withdraw() public {
+        address sender = _msgSender();
+        payable(sender).transfer(balances[sender]);
     }
 
     function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
