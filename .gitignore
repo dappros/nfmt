@@ -1,0 +1,6 @@
+node_modules
+contracts/node_modules
+.env
+contracts/.env
+contracts/package-lock.json
+package-lock.json
