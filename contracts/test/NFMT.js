@@ -1,5 +1,5 @@
 const { expect } = require("chai");
-const { ethers } = require("hardhat");
+const { ethers, waffle } = require("hardhat");
 
 describe("NFMT", function () {
   let owner, usr1, usr2, usr3, nfmt;
@@ -24,5 +24,13 @@ describe("NFMT", function () {
 
   it("mint 1 should not allow to mint many at the same time", async function () {
     await expect(nfmt.connect(usr1).mint(1, 2)).to.be.reverted;
-  })
+  });
+
+  it("mint 2 should execute only if STEEL_COST was paid", async function () {
+    let steelCost = await nfmt.STEEL_COST();
+    await nfmt.connect(usr1).mint(2, 1, {value: steelCost.toString()});
+    let contractBalance = await waffle.provider.getBalance(nfmt.address);
+
+    expect(contractBalance.toString()).to.equal(steelCost.toString());
+  });
 });
