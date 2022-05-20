@@ -81,7 +81,7 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
     function uri(uint256 tokenId) override public pure returns (string memory) {
         return (
             string(abi.encodePacked(
-                "ipfs://",
+                "ipfs://QmcwELSVvGxegzAAm9WBZJCAv36LxADNXBZVxfmrctz3pA/",
                 Strings.toString(tokenId),
                 ".json"
             ))
