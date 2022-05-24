@@ -31,10 +31,11 @@ For beneficiary contract admin should set up the address of the deployed collect
 
 If receiving any commission / royalty from OpenSea and other marketplacse, or donation payments directly from wallets, contract should accumulate such donations.
 
-1. Anybody (not just admin) can call a "withdraw" function which transfers any accumulated ETH to all the charities wallets according to proportions set.
+1. Anybody (not just admin) can call a "withdraw" function specifying one of the withdrawal addresses. 
+2. Contract verifies that the specified withdrawal address matches one of the addresses that are pre-defined in the contract.
+3. This transfers any proportional ETH accumulated for the given address to the given charity wallet.
 
-
-
+This is needed so that withdrawals can happen to charities one by one, for example one of them has lost access to their wallet, so there is no need to waste gas fees on withdrawing there.
 
 ## Project inspiration / background
 
