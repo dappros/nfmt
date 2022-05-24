@@ -94,6 +94,14 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
         payable(_to).transfer(balances[_to]);
     }
 
+    receive() external payable {
+        require(msg.value > 0, "");
+        uint256 oneQuarter = msg.value / 4;
+        balances[CHARITY1] += oneQuarter + oneQuarter;
+        balances[CHARITY2] += oneQuarter;
+        balances[CHARITY3] += oneQuarter;
+    }
+
     function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
         internal
         whenNotPaused
