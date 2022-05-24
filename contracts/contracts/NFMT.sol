@@ -6,8 +6,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/token/ERC1155/extensions/ERC1155Supply.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
+contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     string public constant name = "Never Forget Memory Token";
     string public constant symbol = "NFMT";
 
@@ -88,7 +89,7 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
         );
     }
 
-    function withdraw(address _to) public {
+    function withdraw(address _to) public nonReentrant {
         require(balances[_to] != 0, "");
         payable(sender).transfer(balances[_to]);
     }
