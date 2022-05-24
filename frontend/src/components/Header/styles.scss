@@ -1,0 +1,10 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+  padding: 10px;
+
+  .header-disconnect {
+    display: flex;
+  }
+}

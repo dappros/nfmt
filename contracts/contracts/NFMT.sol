@@ -88,9 +88,9 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply {
         );
     }
 
-    function withdraw() public {
-        address sender = _msgSender();
-        payable(sender).transfer(balances[sender]);
+    function withdraw(address _to) public {
+        require(balances[_to] != 0, "");
+        payable(sender).transfer(balances[_to]);
     }
 
     function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)

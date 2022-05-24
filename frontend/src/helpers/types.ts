@@ -131,7 +131,7 @@ export interface IMethod {
 }
 
 export interface IBoxImage {
-  "@type": string;
+  '@type': string;
   contentUrl: {
     [label: string]: string;
   };

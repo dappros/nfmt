@@ -44,7 +44,7 @@ export const apiGetAccountNonce = async (
 }
 
 export const apiGetGasPrices = async (): Promise<IGasPrices> => {
-  const response = await api.get(`/gas-prices`)
+  const response = await api.get('/gas-prices')
   const { result } = response.data
   return result
 }
