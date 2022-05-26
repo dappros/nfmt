@@ -92,6 +92,7 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     function withdraw(address _to) public nonReentrant {
         require(balances[_to] != 0, "");
         payable(_to).transfer(balances[_to]);
+        balances[_to] = 0;
     }
 
     receive() external payable {
