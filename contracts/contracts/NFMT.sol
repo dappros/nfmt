@@ -23,10 +23,10 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
 
     // *** [🟢 CLASSES AND RARITY] ********************************************************************************************************************************
 
-    // 🇬🇧🇺🇸: RARITY SECTION - Here you can specify what types of tokens are in your collection, what is their rarity (how many will be issued in each class) and the cost of a mint
-    // 🇬🇧🇺🇸: (Alternatively you can skip this and go ahead with a defaul set of classes and prices.)
     // 🇺🇦: РОЗДІЛ "RARITY" - тут можна вказати які типи токенів є в вашої колекції, яка їх рідкість (скільки взагалі буде випущено кожного класу) та вартість мінту
     // 🇺🇦: (Ви можете пропустити це й скористатися стандартним набором класів і цін).
+    // 🇬🇧🇺🇸: RARITY SECTION - Here you can specify what types of tokens are in your collection, what is their rarity (how many will be issued in each class) and the cost of a mint
+    // 🇬🇧🇺🇸: (Alternatively you can skip this and go ahead with a defaul set of classes and prices.)
 
     // how many "Bronze" copies can be minted (by default, these are free to mint)
     uint constant public BRONZE_MAX_SUPPLY = 245;
@@ -49,9 +49,9 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
 
     // *** [🟢 FUNDS DISTRIBUTION ] ********************************************************************************************************************************
 
-    // 🇬🇧🇺🇸: !!IMPORTANT!! - replace these addresses with ETH addresses of charities / volunteers whom you want to support!
     // 🇺🇦: !!ВАЖЛИВО!! - замініть ці адреси на адреси ETH благодійних організацій / волонтерів, яких ви хочете підтримати!
-    
+    // 🇬🇧🇺🇸: !!IMPORTANT!! - replace these addresses with ETH addresses of charities / volunteers whom you want to support!
+
     address constant CHARITY1 = 0x68B11194369F0145a86C855c1db1750BD51CC8de;
     address constant CHARITY2 = 0x21f5874aBC2c220d0Da49D142000D9dc75289C42;
     address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
