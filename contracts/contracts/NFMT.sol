@@ -1,3 +1,6 @@
+// (c) 2022 Dappros Ltd, project by Taras Filatov, Borys Bordunov, Mykhaylo Mohilyuk
+// 🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦 Never Forget Memory Token 🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦
+
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
@@ -9,23 +12,50 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
+
+    // You can change this to your own collection name
     string public constant name = "Never Forget Memory Token";
+    
+    // You can change this to your own collection symbol
     string public constant symbol = "NFMT";
 
+    // *** [🟢 CLASSES AND RARITY] ********************************************************************************************************************************
+
+    // 🇬🇧🇺🇸: RARITY SECTION - Here you can specify what types of tokens are in your collection, what is their rarity (how many will be issued in each class) and the cost of a mint
+    // 🇬🇧🇺🇸: (Alternatively you can skip this and go ahead with a defaul set of classes and prices.)
+    // 🇺🇦: РОЗДІЛ "RARITY" - тут можна вказати які типи токенів є в вашої колекції, яка їх рідкість (скільки взагалі буде випущено кожного класу) та вартість мінту
+    // 🇺🇦: (Ви можете пропустити це й скористатися стандартним набором класів і цін).
+
+    // how many "Bronze" copies can be minted (by default, these are free to mint)
     uint constant public BRONZE_MAX_SUPPLY = 245;
+    
+    // how many "Steel" copies can be minted (by default, these cost 0.05 ETH)
     uint constant public STEEL_MAX_SUPPLY = 100;
+    
+    // same with above, but each type is more rare and requires a higher donation
     uint constant public SILVER_MAX_SUPPLY = 50;
     uint constant public GOLD_MAX_SUPPLY = 20;
     uint constant public DIAMOND_MAX_SUPPLY = 5;
 
-    uint constant public STEEL_COST = 50000000000000000; // 0.05
-    uint constant public SILVER_COST = 100000000000000000; // 0.1 Eth
-    uint constant public GOLD_COST = 300000000000000000; // 0.3 Eth
-    uint constant public DIAMOND_COST = 1000000000000000000; // 1 Eth
+    uint constant public STEEL_COST = 50000000000000000; // 0.05 ETH
+    uint constant public SILVER_COST = 100000000000000000; // 0.1 ETH
+    uint constant public GOLD_COST = 300000000000000000; // 0.3 ETH
+    uint constant public DIAMOND_COST = 1000000000000000000; // 1 ETH
 
+    // *** [🛑 CLASSES AND RARITY] ********************************************************************************************************************************
+    
+
+    // *** [🟢 FUNDS DISTRIBUTION ] ********************************************************************************************************************************
+
+    // 🇬🇧🇺🇸: !!IMPORTANT!! - replace these addresses with ETH addresses of charities / volunteers whom you want to support!
+    // 🇺🇦: !!ВАЖЛИВО!! - замініть ці адреси на адреси ETH благодійних організацій / волонтерів, яких ви хочете підтримати!
+    
     address constant CHARITY1 = 0x68B11194369F0145a86C855c1db1750BD51CC8de;
     address constant CHARITY2 = 0x21f5874aBC2c220d0Da49D142000D9dc75289C42;
     address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
+
+    // *** [🛑 FUNDS DISTRIBUTION ] ********************************************************************************************************************************
+
 
     mapping(address => uint) public balances;
 
@@ -88,6 +118,11 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
             ))
         );
     }
+
+    // 🇺🇦: Цю функцію може викликати КОЖНИЙ, хто готовий витратити газ, щоб вивести накопичені кошти на один із ПРИЗНАЧЕНИХ РАНІШЕ гаманців фінансування.
+    // 🇺🇦: (Тобто - фінансування йде зазначеним благодійним фондам, але запит на виплату може відправити будь хто.)
+    // 🇬🇧🇺🇸: This function can be called by ANYONE who is willing to spend gas to withdraw the accumulated funds to one of the PRE-DEFINED funding wallets.
+    // 🇬🇧🇺🇸: (So funding will always go to the pre-set charities etc, but the pay out can be requested by anyone.)
 
     function withdraw(address _to) public nonReentrant {
         require(balances[_to] != 0, "");
