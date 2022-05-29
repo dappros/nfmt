@@ -1,5 +1,7 @@
-// (c) 2022 Dappros Ltd, project by Taras Filatov, Borys Bordunov, Mykhaylo Mohilyuk
+// ©️ 2022 Dappros Ltd, project by Taras Filatov, Borys Bordunov, Mykhaylo Mohilyuk
 // 🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦 "Never Forget" Memory/Meme Token 🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦🇺🇦
+// 👋 open source - feel free to fork/copy/reuse this smart contract for your needs 👋
+// 📖 learn more at https://github.com/dappros/nfmt/ 📖
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
