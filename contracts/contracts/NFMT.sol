@@ -57,8 +57,11 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
 
     // 🇺🇦: логіка по виплатах - скільки платити на яку адресу (в нашому прикладі перша отримує 50%, а друга та третя по 25%)
-    // 🇺🇦: (замінить на логіку яка вам потрібна)
-    // 🇬🇧🇺🇸: 
+    // 🇺🇦: (замінить на логіку яка вам потрібна). 
+    // 🇺🇦: Примітка: таке саме розподілення буде також для оплат що йдуть напряму на контракт.
+    // 🇬🇧🇺🇸: pay out logic - how much to pay to which address (in our example CHARITY1 receives 50%, while second and third receive 25% each)
+    // 🇬🇧🇺🇸: (replace with your own logic as required). 
+    // 🇬🇧🇺🇸: Note: same distirubtion will be applied to payments that go directly to the contract.
 
     receive() external payable {
         require(msg.value > 0, "");
