@@ -14,6 +14,7 @@ A: Users can mint "remembrance", "meme" or "charitable cause" tokens for free or
 The mechanism is described in detail below.
 
 **READ THE CODE**
+
 It might be actually easier for you to read the contract code: [https://github.com/dappros/nfmt/blob/main/contracts/contracts/NFMT.sol](https://github.com/dappros/nfmt/blob/main/contracts/contracts/NFMT.sol) as it has detailed comments in English 🇬🇧🇺🇸 and Ukrainian 🇺🇦. 
 
 ![NFMT Illustration](NFMT_illustration.png)
