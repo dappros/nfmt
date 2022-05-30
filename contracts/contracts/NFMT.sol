@@ -52,9 +52,9 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     // 🇺🇦: !!ВАЖЛИВО!! - замініть ці адреси на адреси ETH благодійних організацій / волонтерів, яких ви хочете підтримати!
     // 🇬🇧🇺🇸: !!IMPORTANT!! - replace these addresses with ETH addresses of charities / volunteers whom you want to support!
 
-    address constant CHARITY1 = 0x68B11194369F0145a86C855c1db1750BD51CC8de;
-    address constant CHARITY2 = 0x21f5874aBC2c220d0Da49D142000D9dc75289C42;
-    address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
+    address constant CHARITY1 = 0xba65e794d8aec422d0d71cce1095c63da579e144; // example N1 - 0xba65e794d8aec422d0d71cce1095c63da579e144 - "GO Solidarna Sprava Gromad", Yurii Biryukov https://www.facebook.com/yuri.biriukov 
+    address constant CHARITY2 = 0x93Bda139023d582C19D70F55561f232D3CA6a54c; // example N2 - 0x93Bda139023d582C19D70F55561f232D3CA6a54c - "Come back alive" wallet https://www.comebackalive.in.ua/donate
+    address constant CHARITY3 = 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6; // example N3 - 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6 - Kharkiv Territorial Defence (D7) 
 
     // 🇺🇦: логіка по виплатах - скільки платити на яку адресу (в нашому прикладі перша отримує 50%, а друга та третя по 25%)
     // 🇺🇦: (замінить на логіку яка вам потрібна). 
