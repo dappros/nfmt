@@ -2,19 +2,17 @@
 
 Q: What is NFMT?
 
-A1: "Never Forget" Memory Token
+A: "Never Forget" Memory/Meme Token
 
-A2: NFT Funding Meme Token
-
-NFTM is a variation of ERC-1155 NFT smart contract intended for following purposes:
-* allow users to self-mint & store the digital collectibles they care about
-* allow users to donate funds to the causes they care about
+It is an NFT-based smart contract that allows users to simultaneously collect digital memorabilia and donate to the causes they care about. 
+Our inspiration is current (2022) Ukrainian 🇺🇦 fight for freedom and survival, but the format can be applied to other charitable causes too.
 
 Q: What is the mechanism of NFMT?
 
 A: Users can mint "remembrance", "meme" or "charitable cause" tokens for free or including an optional donation. All donations are immediately sent to the charities hard-coded into the collection smart contract.
 
 The mechanism is described in detail below.
+(also recommended that you read the contract code: [https://github.com/dappros/nfmt/blob/main/contracts/contracts/NFMT.sol](https://github.com/dappros/nfmt/blob/main/contracts/contracts/NFMT.sol) as it has detailed comments in English 🇬🇧🇺🇸 and Ukrainian 🇺🇦. 
 
 ![NFMT Illustration](NFMT_illustration.png)
 
