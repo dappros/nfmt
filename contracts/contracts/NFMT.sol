@@ -56,6 +56,18 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     address constant CHARITY2 = 0x21f5874aBC2c220d0Da49D142000D9dc75289C42;
     address constant CHARITY3 = 0xe315f685aA63d0B17AE4fd8AAfCAF2C811BE34c0;
 
+    // 🇺🇦: логіка по виплатах - скільки платити на яку адресу (в нашому прикладі перша отримує 50%, а друга та третя по 25%)
+    // 🇺🇦: (замінить на логіку яка вам потрібна)
+    // 🇬🇧🇺🇸: 
+
+    receive() external payable {
+        require(msg.value > 0, "");
+        uint256 oneQuarter = msg.value / 4;
+        balances[CHARITY1] += oneQuarter + oneQuarter;
+        balances[CHARITY2] += oneQuarter;
+        balances[CHARITY3] += oneQuarter;
+    }
+
     // *** [🛑 FUNDS DISTRIBUTION ] ********************************************************************************************************************************
 
 
@@ -130,14 +142,6 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
         require(balances[_to] != 0, "");
         payable(_to).transfer(balances[_to]);
         balances[_to] = 0;
-    }
-
-    receive() external payable {
-        require(msg.value > 0, "");
-        uint256 oneQuarter = msg.value / 4;
-        balances[CHARITY1] += oneQuarter + oneQuarter;
-        balances[CHARITY2] += oneQuarter;
-        balances[CHARITY3] += oneQuarter;
     }
 
     function _beforeTokenTransfer(address operator, address from, address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data)
