@@ -63,7 +63,8 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     address constant CHARITY3 = 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6; // example N3 - 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6 - Demokratichna Sokyra (D7), https://sokyra.space/uk#help
 
     // some other addresses you might consider:
-    // address constant CHARITY1 = 02x93Bda139023d582C19D70F55561f23D3CA6a54c; // "Come back alive" https://www.comebackalive.in.ua/donate
+    // address constant CHARITY1 = 02x93Bda139023d582C19D70F55561f23D3CA6a54c; // "Save Trempel", Kharkiv IT Cluster and Pavel Obod initiative - https://twitter.com/SaveTrempel
+    // address constant CHARITY1 = 02x93Bda139023d582C19D70F55561f23D3CA6a54c; // "Come back alive" - https://www.comebackalive.in.ua/donate
     // address constant CHARITY1 = 0xA4166BC4Be559b762B346CB4AAad3b051E584E39; // "RazomForUkrane" - https://razomforukraine.org/donate/
 
     // 🇺🇦: логіка по виплатах - скільки платити на яку адресу (в нашому прикладі перша отримує 50%, а друга та третя по 25%)
