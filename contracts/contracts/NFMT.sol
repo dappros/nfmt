@@ -59,7 +59,7 @@ contract NFMT is ERC1155, Ownable, Pausable, ERC1155Supply, ReentrancyGuard {
     // 🇬🇧🇺🇸: !!IMPORTANT!! - replace these addresses with ETH addresses of charities / volunteers whom you want to support!
 
     address constant CHARITY1 = 0x12c546c89E4158b151597d761048A5C33C4f54CC; // example N1 - 0x12c546c89E4158b151597d761048A5C33C4f54CC - "NOVA Ukraine", https://novaukraine.org/donate/
-    address constant CHARITY2 = 0x8A4b9c5646A580d13E95164b7445E833bFcC78CF; // example N2 - 0xba65e794d8aec422d0d71cce1095c63da579e144 - "Mir & Co" fund, Myroslav Gai, https://mirco.com.ua/uk/requisites.html
+    address constant CHARITY2 = 0x8A4b9c5646A580d13E95164b7445E833bFcC78CF; // example N2 - 0x8A4b9c5646A580d13E95164b7445E833bFcC78CF - "Mir & Co" fund, Myroslav Gai, https://mirco.com.ua/uk/requisites.html
     address constant CHARITY3 = 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6; // example N3 - 0xaD7F901b1eba489552c37b071b7D97DDB2DF27B6 - Demokratychna Sokyra (D7), https://sokyra.space/uk#help
 
     // some other addresses you might consider:
