@@ -67,6 +67,8 @@ contract NFMT_L2 is ERC1155, Pausable, ERC1155Supply, ReentrancyGuard, ERC1155Bu
     constructor(
         address owner_,
         address coinAddress_,
+        string memory name_,
+        string memory symbol_,
         string memory baseURI_,
         address[] memory beneficiaries_,
         uint[] memory splitPercents_,
@@ -84,6 +86,8 @@ contract NFMT_L2 is ERC1155, Pausable, ERC1155Supply, ReentrancyGuard, ERC1155Bu
         maxSupplies = maxSupplies_;
         maxId = maxSupplies_.length;
         costs = costs_;
+        name = name_;
+        symbol = symbol_;
     }
 
     function pause() public onlyOwner {
