@@ -1,3 +1,5 @@
+![ApacheCassandra](https://img.shields.io/badge/cassandra-%231287B1.svg?style=for-the-badge&logo=apache-cassandra&logoColor=white)
+
 # NFMT
 
 Q: What is NFMT?
