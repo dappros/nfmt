@@ -1,4 +1,5 @@
-https://img.shields.io/github/stars/dappros/ethora
+
+![GitHub watchers](https://img.shields.io/github/watchers/dappros/ethora) ![GitHub forks](https://img.shields.io/github/forks/dappros/ethora) ![GitHub Repo stars](https://img.shields.io/github/stars/dappros/ethora)
 
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white) ![iOS](https://img.shields.io/badge/iOS-000000?style=flat&logo=ios&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
 
